@@ -1,3 +1,3 @@
 # SwiftUI-Utils
 
-A description of this package.
+A collection of SwiftUI utilities.
