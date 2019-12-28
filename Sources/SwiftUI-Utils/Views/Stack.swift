@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct Stack<Content> : View where Content : View {
         
-    var body: AnyView
+    public var body: AnyView
     
     @inlinable public init(_ stackType: Axis, spacing: CGFloat? = nil, @ViewBuilder content: () -> Content) {
         

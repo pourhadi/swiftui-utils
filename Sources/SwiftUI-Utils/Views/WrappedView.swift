@@ -17,14 +17,14 @@ public struct WrappedUIView<V: UIView>: UIViewRepresentable {
         self.updateBlock = updateBlock
     }
     
-    func makeUIView(context: UIViewRepresentableContext<WrappedUIView<V>>) -> V {
+    public func makeUIView(context: UIViewRepresentableContext<WrappedUIView<V>>) -> V {
         return initBlock()
     }
     
-    func updateUIView(_ uiView: V, context: UIViewRepresentableContext<WrappedUIView<V>>) {
+    public func updateUIView(_ uiView: V, context: UIViewRepresentableContext<WrappedUIView<V>>) {
         updateBlock?(uiView, context)
     }
     
-    typealias UIViewType = V
+    public typealias UIViewType = V
 
 }
