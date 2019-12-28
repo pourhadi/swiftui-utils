@@ -7,21 +7,21 @@
 
 import SwiftUI
 
-enum Alignment {
+public enum Alignment {
     case leadingTop
     case trailingBottom
 }
 
 extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+    public func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorners(radius: radius, corners: corners))
     }
     
-    var any: AnyView {
+    public var any: AnyView {
         return AnyView(self)
     }
     
-    func centered(_ axis: Axis = .horizontal) -> some View {
+    public func centered(_ axis: Axis = .horizontal) -> some View {
         Stack(axis) {
             Spacer()
             self
@@ -29,7 +29,7 @@ extension View {
         }
     }
     
-    func align(_ axis: Axis, _ alignment: Alignment) -> some View {
+    public func align(_ axis: Axis, _ alignment: Alignment) -> some View {
         if alignment == .leadingTop {
             return Stack(axis) {
                 self

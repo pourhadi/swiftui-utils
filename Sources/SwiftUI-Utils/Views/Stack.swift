@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Stack<Content> : View where Content : View {
+public struct Stack<Content> : View where Content : View {
         
     var body: AnyView
     

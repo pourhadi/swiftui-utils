@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct WrappedUIView<V: UIView>: UIViewRepresentable {
+public struct WrappedUIView<V: UIView>: UIViewRepresentable {
     
     let initBlock: ()->V
     let updateBlock: ((_ uiView: V, _ context: UIViewRepresentableContext<WrappedUIView<V>>) -> Void)?
     
-    init(initBlock: @escaping ()->V, _ updateBlock:((_ uiView: V, _ context: UIViewRepresentableContext<WrappedUIView<V>>) -> Void)?) {
+    public init(initBlock: @escaping ()->V, _ updateBlock:((_ uiView: V, _ context: UIViewRepresentableContext<WrappedUIView<V>>) -> Void)?) {
         self.initBlock = initBlock
         self.updateBlock = updateBlock
     }

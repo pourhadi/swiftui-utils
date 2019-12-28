@@ -10,7 +10,7 @@ import SwiftUI
 extension Image {
 
     /// For using SF Pro symbols.
-    static func symbol(_ named: String, _ symbolConfiguration: UIImage.SymbolConfiguration = .unspecified) -> Self? {
+    public static func symbol(_ named: String, _ symbolConfiguration: UIImage.SymbolConfiguration = .unspecified) -> Self? {
         guard let img = UIImage(systemName: named, withConfiguration: symbolConfiguration) else {
             return nil
         }
